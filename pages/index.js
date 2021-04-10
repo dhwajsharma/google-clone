@@ -3,10 +3,11 @@ import Avatar from '../components/Avatar'
 import { MicrophoneIcon, ViewGridIcon } from "@heroicons/react/solid"
 import { SearchIcon } from "@heroicons/react/outline"
 import Image from "next/image";
+import Footer from "../components/Footer"
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col justify-center h-screen">
       <Head>
         <title>Google</title>
         <link rel="icon" href="/favicon.ico" />
@@ -29,7 +30,8 @@ export default function Home() {
         </div>
       </header>
 
-      <form className="flex flex-col items-center mt-40 flex-grow">
+      {/* Body */}
+      <form className="flex flex-col items-center mt-40 flex-grow ">
         <Image
           loading="lazy"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"
@@ -48,8 +50,8 @@ export default function Home() {
         </div>
       </form>
 
+      <Footer />
 
-      {/* Footer */}
     </div>
   )
 }
